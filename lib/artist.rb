@@ -22,9 +22,6 @@ class Artist
 
   end
 
-
-
-
 end
 
 class Song
