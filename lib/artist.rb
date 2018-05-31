@@ -8,29 +8,33 @@ class Artist
   end
 
   def add_song(song)
-    song.artist = self
     @songs << song
+    song.artist = self
   end
 
   def add_song_by_name(name)
     song = Song.new(name)
     @songs << song
     song.artist = self
-    
-
   end
+
+  def self.song_count
+    
+  end
+
 
 
 
 end
 
 class Song
-  attr_accessor :name, :artist
+  attr_accessor :name
 
   @@all = []
 
   def initialize(name)
     @title = title
+    @@all << self
   end
 
   def self.all
